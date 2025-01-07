@@ -42,10 +42,12 @@ h1 {
   margin-bottom: 20px;
 }
 .login-container span {
+  display: none;
   color: #e10b0b;
   font-size: 12px;
   padding:  10px 10px 10px 10px;
 }
+
 
 .login-container input {
 width: 100%;
