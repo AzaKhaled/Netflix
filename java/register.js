@@ -19,7 +19,7 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  const passPattern = /^[a-zA-Z0-9]{9,}$/;
+  const passPattern = /^[a-zA-Z0-9]{9,}$/g;
 
   if (!passPattern.test(passValue)) {
     pass_error.style.display = "block";
@@ -27,7 +27,7 @@ form.addEventListener("submit", function (event) {
   } else {
     pass_error.style.display = "none";
   }
-
+  
   function userExists(users, emailValue) {
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === emailValue) {
@@ -48,3 +48,13 @@ form.addEventListener("submit", function (event) {
     form.submit(); 
   }
 });
+
+function press(event) {
+  if (event.target.value.length >= 20) {
+    event.preventDefault();
+    alert("The maximum length is 20 characters.");
+  }
+}
+
+email.addEventListener('keypress', press);
+pass.addEventListener('keypress', press);

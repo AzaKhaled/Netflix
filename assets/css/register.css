@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('../imgs/netflex.png');
+    background: url('../imgs/netflex.png') ;
     font-family: Arial, sans-serif;
   }
   h1 {
